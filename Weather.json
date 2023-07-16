@@ -1,0 +1,351 @@
+{
+  "name": "Weather",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "3f142348-6a65-4fff-b7ca-13335365dfad",
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        600,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "cityName": "Mutiara Damansara,MY"
+      },
+      "name": "Current Weather",
+      "type": "n8n-nodes-base.openWeatherMap",
+      "typeVersion": 1,
+      "position": [
+        800,
+        300
+      ],
+      "id": "d6e09f79-f8dd-4f66-8953-bc990c21229e",
+      "credentials": {
+        "openWeatherMapApi": {
+          "id": "3",
+          "name": "OpenWeatherMap"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "<XXX>",
+        "text": "=Current condition: {{$json[\"condition\"]}}\nTemperature is {{$json[\"temp\"]}}°C but it feels like {{$json[\"feelsLike\"]}}°C\nHumidity is {{$json[\"humidity\"]}}%\nWind Speed is {{$json[\"windSpeed\"]}}m/s towards the {{$json[\"direction\"]}}\nThere is a {{$json[\"rain\"]}}% chance of rain in the next 3 hours.",
+        "additionalFields": {}
+      },
+      "name": "Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        1680,
+        380
+      ],
+      "id": "b3d14d10-7373-4c8b-b2c4-87053336961f",
+      "credentials": {
+        "telegramApi": {
+          "id": "4",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "name": "Wind Speed and Conditions Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        280
+      ],
+      "id": "b0588271-ddf7-4260-870e-f2cceff7c03e"
+    },
+    {
+      "parameters": {
+        "operation": "5DayForecast",
+        "cityName": "<XXX>"
+      },
+      "name": "Rain Forecast",
+      "type": "n8n-nodes-base.openWeatherMap",
+      "typeVersion": 1,
+      "position": [
+        800,
+        540
+      ],
+      "id": "5afd92c8-0b3a-4613-aadf-c853bff825d0",
+      "credentials": {
+        "openWeatherMapApi": {
+          "id": "3",
+          "name": "OpenWeatherMap"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "name": "Final Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        1540,
+        380
+      ],
+      "id": "75b169a3-0ee3-4a1a-a6d4-c3886a711a40"
+    },
+    {
+      "parameters": {
+        "functionCode": "var degrees = ($json[\"degree\"]);\n\nfunction toTextualDescription(){\n    if (degrees>337.5) return 'North';\n    if (degrees>292.5) return 'North West';\n    if (degrees>247.5) return 'West';\n    if (degrees>202.5) return 'South West';\n    if (degrees>157.5) return 'South';\n    if (degrees>122.5) return 'South East';\n    if (degrees>67.5) return 'East';\n    if (degrees>22.5){return 'North East';}\n    return 'unknown';\n}\n\nfor (item of items) {\n  item.json.direction = toTextualDescription();\n}\n\nreturn items;"
+      },
+      "id": "59f15443-057f-4a46-8d5d-bd7c6b493a77",
+      "name": "Get Wind Direction",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "mode": "custom",
+              "cronExpression": "0 7-23 * * *"
+            }
+          ]
+        }
+      },
+      "name": "Cron - Weather",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [
+        600,
+        420
+      ],
+      "id": "9fb1b624-b37b-48b1-baeb-56b8433e00c6"
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "condition",
+              "value": "={{$node[\"Current Weather\"].json[\"weather\"][0][\"main\"]}}"
+            }
+          ],
+          "number": [
+            {
+              "name": "temp",
+              "value": "={{Math.round($json[\"main\"][\"temp\"])}}"
+            },
+            {
+              "name": "feelsLike",
+              "value": "={{Math.round($json[\"main\"][\"feels_like\"])}}"
+            },
+            {
+              "name": "humidity",
+              "value": "={{$json[\"main\"][\"humidity\"]}}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": "={{true}}"
+        }
+      },
+      "name": "Filter - Conditions",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        960,
+        380
+      ],
+      "id": "bc7b1003-0df3-4357-9a4f-8c60ca35322a"
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "number": [
+            {
+              "name": "windSpeed",
+              "value": "={{$json[\"wind\"][\"speed\"]}}"
+            },
+            {
+              "name": "degree",
+              "value": "={{$json[\"wind\"][\"deg\"]}}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "name": "Filter - Wind Speed",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        960,
+        220
+      ],
+      "id": "85116c5e-7fe4-4b42-bc8e-69ae0b07836c"
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "rain",
+              "value": "={{Math.round($node[\"Rain Forecast\"].json[\"list\"][1][\"pop\"]*100)}}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": "={{true}}"
+        }
+      },
+      "name": "Filter - Rain",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        960,
+        540
+      ],
+      "id": "674d7359-df7d-4b3e-a73a-bae802527b9f"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Current Weather": {
+      "main": [
+        [
+          {
+            "node": "Filter - Wind Speed",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Filter - Conditions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Rain Forecast": {
+      "main": [
+        [
+          {
+            "node": "Filter - Rain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wind Speed and Conditions Merge": {
+      "main": [
+        [
+          {
+            "node": "Final Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Final Merge": {
+      "main": [
+        [
+          {
+            "node": "Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Wind Direction": {
+      "main": [
+        [
+          {
+            "node": "Wind Speed and Conditions Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cron - Weather": {
+      "main": [
+        [
+          {
+            "node": "Current Weather",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Rain Forecast",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter - Conditions": {
+      "main": [
+        [
+          {
+            "node": "Wind Speed and Conditions Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Filter - Wind Speed": {
+      "main": [
+        [
+          {
+            "node": "Get Wind Direction",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter - Rain": {
+      "main": [
+        [
+          {
+            "node": "Final Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": false,
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": 300,
+    "errorWorkflow": "1"
+  },
+  "versionId": "9d194814-9f6f-49c0-94c1-c18f248ba8d7",
+  "id": "4",
+  "meta": {
+    "instanceId": "58096112a1ccefc21a24f50e381a72aabdf36902667a253f24c824646258cba4"
+  },
+  "tags": []
+}
