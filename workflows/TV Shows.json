@@ -1,0 +1,782 @@
+{
+  "active": true,
+  "connections": {
+    "Add Magnet": {
+      "main": [
+        [
+          {
+            "node": "Get Torrent Info",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Torrent Info": {
+      "main": [
+        [
+          {
+            "node": "Get Files",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Torrent ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Torrent ID": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "File ID": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Select Files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Video Files": {
+      "main": [
+        [
+          {
+            "node": "File ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Files": {
+      "main": [
+        [
+          {
+            "node": "Filter Video Files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Variables": {
+      "main": [
+        [
+          {
+            "node": "Remove Duplicates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remove Duplicates": {
+      "main": [
+        [
+          {
+            "node": "Add Magnet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Add Magnet",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Telegram - New TV Show Episode1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Select Files": {
+      "main": [
+        [
+          {
+            "node": "Telegram - New TV Show Episode",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Feed Trigger": {
+      "main": [
+        [
+          {
+            "node": "Set Variables",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-06-25T03:14:58.885Z",
+  "id": "jDzgcGSKtRYEoXFy",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "TV Shows",
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.real-debrid.com/rest/1.0/torrents/addMagnet",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "contentType": "form-urlencoded",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "magnet",
+              "value": "={{ $json[\"magnet\"] }}"
+            },
+            {
+              "name": "dn",
+              "value": "={{ $json[\"dn\"] }}"
+            },
+            {
+              "name": "tr",
+              "value": "={{ $json[\"tr\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 5,
+              "batchInterval": 500
+            }
+          }
+        }
+      },
+      "id": "a73fdd7f-ea5d-457a-9215-f4e840284ec7",
+      "name": "Add Magnet",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1760,
+        580
+      ],
+      "alwaysOutputData": false,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ytzzx1ZBpYLMOrkx",
+          "name": "Real Debrid - dovahkiin93"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.real-debrid.com/rest/1.0/torrents/info/{{ $json[\"id\"] }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "b8980f0e-ea28-450e-807e-45f0a515fbc0",
+      "name": "Get Torrent Info",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1900,
+        580
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ytzzx1ZBpYLMOrkx",
+          "name": "Real Debrid - dovahkiin93"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "number": [
+            {
+              "name": "torrentID",
+              "value": "={{ $json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3f98d505-eaa9-4cdc-9acd-6d0d084dc656",
+      "name": "Torrent ID",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        2040,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "number": [
+            {
+              "name": "filedID",
+              "value": "={{ $json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aa20179c-08c2-4986-b18d-ff9624c22ad9",
+      "name": "File ID",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        2320,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combinationMode": "mergeByPosition",
+        "options": {}
+      },
+      "id": "6b09dece-68c5-488e-a0a3-95add094c01a",
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2,
+      "position": [
+        2460,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.path }}",
+              "operation": "contains",
+              "value2": "mkv"
+            },
+            {
+              "value1": "={{ $json.path }}",
+              "operation": "notContains",
+              "value2": "sample"
+            }
+          ]
+        }
+      },
+      "id": "1216a57a-802a-4c75-b39a-5a35b624765b",
+      "name": "Filter Video Files",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 1,
+      "position": [
+        2180,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "=files",
+        "options": {}
+      },
+      "id": "9910f756-3e94-4d89-8cc0-a966f23ddaf1",
+      "name": "Get Files",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        2040,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "title",
+              "value": "={{$json[\"title\"]}}"
+            },
+            {
+              "name": "magnet",
+              "value": "={{$json[\"link\"]}}"
+            },
+            {
+              "name": "id",
+              "value": "={{$json[\"guid\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set Variables",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        580
+      ],
+      "id": "4aa4c8a7-5aec-4ff1-917f-b2c401a2bbc6"
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newEpisodeIds = items.map(item => item.json[\"id\"]);\nconst oldEpisodeIds = staticData.oldEpisodeIds; \n\nif (!oldEpisodeIds) {\n  staticData.oldEpisodeIds = newEpisodeIds;\n  return items;\n}\n\nconst actualNewEpisodeIds = newEpisodeIds.filter((id) => !oldEpisodeIds.includes(id));\nconst actualNewEpisode = items.filter((data) => actualNewEpisodeIds.includes(data.json['id']));\nstaticData.oldEpisodeIds = [...actualNewEpisodeIds, ...oldEpisodeIds];\n\nreturn actualNewEpisode; "
+      },
+      "name": "Remove Duplicates",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        580
+      ],
+      "id": "90871134-9796-4834-832a-47ecc1649cb8"
+    },
+    {
+      "parameters": {
+        "chatId": "-1001618651151",
+        "text": "={{ $item(\"0\").$node[\"RSS Feed Trigger\"].json[\"title\"] }} is now available on Infuse. Enjoy your show!",
+        "additionalFields": {
+          "reply_to_message_id": 4255
+        }
+      },
+      "id": "2f5cd2bb-39cd-4a82-8d52-c4a8c5dd2158",
+      "name": "Telegram - New TV Show Episode",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        2740,
+        520
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Manual Magnet Link\n**Double click** to edit me. [Guide](https://docs.n8n.io/workflows/sticky-notes/)",
+        "height": 344.94701163646357,
+        "width": 752.4610465288661
+      },
+      "id": "6705a527-f2f0-478e-9072-f3e23b484c9d",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        940,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## ShowRSS\nGets links from ShowRSS\n",
+        "height": 337.3765797068961,
+        "width": 558.1687513834413
+      },
+      "id": "99830387-6ecb-4d26-8d4b-c1f71b46c2da",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1134.9021147582907,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Add to Real Debrid\nAdds magnet link to Real Debrid",
+        "height": 338.89915095132653,
+        "width": 1203.7442033562702
+      },
+      "id": "af88f7e7-fd4f-4214-9172-b91d54543436",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1707.0806774048292,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "updates": [
+          "*"
+        ],
+        "additionalFields": {}
+      },
+      "id": "a1118bc6-c987-4b90-b98a-42936007780a",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        980,
+        920
+      ],
+      "webhookId": "7ba602f7-a186-46e3-8575-5bb4d2c6ab3e",
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "chatId": "-1001618651151",
+        "text": "=Hi {{ $json.username }}, your torrent will be added shortly",
+        "replyMarkup": "forceReply",
+        "forceReply": {
+          "force_reply": true
+        },
+        "additionalFields": {
+          "reply_to_message_id": 4255
+        }
+      },
+      "id": "ce52495d-841d-4f82-ac75-40bef4c3f13a",
+      "name": "Telegram - New TV Show Episode1",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        980
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b1c90d1b-90ea-412a-a2b0-2ce0430583ae",
+              "name": "magnet",
+              "value": "={{ $json.message.reply_to_message.text }}",
+              "type": "string"
+            },
+            {
+              "id": "59148f31-1440-4b08-a45c-b936e255260e",
+              "name": "username",
+              "value": "={{ $json.message.reply_to_message.from.username }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a41dc85c-c0ad-4932-a24e-fb8241b7abdc",
+      "name": "Edit Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1360,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "cf6b83b8-ce7b-49da-9180-affbcccc818d",
+              "leftValue": "={{ $json.message.reply_to_message.text }}",
+              "rightValue": "magnet",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "fdf1f482-20cc-45c9-9246-c18f38050cd6",
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1140,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.real-debrid.com/rest/1.0/torrents/selectFiles/{{ $json[\"torrentID\"] }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "contentType": "form-urlencoded",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "files",
+              "value": "={{ $json[\"filedID\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "bb8e8124-081b-4601-8e96-f54b737d3d1a",
+      "name": "Select Files",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2600,
+        520
+      ],
+      "alwaysOutputData": false,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ytzzx1ZBpYLMOrkx",
+          "name": "Real Debrid - dovahkiin93"
+        }
+      },
+      "onError": "continueRegularOutput",
+      "notes": "curl -H \"Authorization: Bearer **\" --request POST \"https://api.real-debrid.com/rest/1.0/torrents/selectFiles/LNXKQYJJGCSHE\" -d \"files=1\""
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "feedUrl": "https://showrss.info/user/124654.rss?magnets=true&namespaces=true&name=clean&quality=null&re=no"
+      },
+      "id": "85c00f8c-55d1-4923-ad62-4ab86769738b",
+      "name": "RSS Feed Trigger",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        580
+      ]
+    }
+  ],
+  "pinData": {
+    "Telegram Trigger": [
+      {
+        "json": {
+          "update_id": 273645701,
+          "message": {
+            "message_id": 4332,
+            "from": {
+              "id": 223394959,
+              "is_bot": false,
+              "first_name": "Patrick",
+              "last_name": "Mariadass",
+              "username": "patrickdass",
+              "language_code": "en"
+            },
+            "chat": {
+              "id": -1001618651151,
+              "title": "Home Chat",
+              "is_forum": true,
+              "type": "supergroup"
+            },
+            "date": 1713592052,
+            "message_thread_id": 4255,
+            "reply_to_message": {
+              "message_id": 4327,
+              "from": {
+                "id": 223394959,
+                "is_bot": false,
+                "first_name": "Patrick",
+                "last_name": "Mariadass",
+                "username": "patrickdass",
+                "language_code": "en"
+              },
+              "chat": {
+                "id": -1001618651151,
+                "title": "Home Chat",
+                "is_forum": true,
+                "type": "supergroup"
+              },
+              "date": 1713591806,
+              "message_thread_id": 4255,
+              "text": "magnet:?xt=urn:btih:88315159A08708186BBE2C15C56DDB8FB4537195&dn=The+Walking+Dead+The+Ones+Who+Live+S01E06+1080p+WEB+h264+ETHEL+T&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2F9.rarbg.me%3A2960&tr=udp%3A%2F%2F9.rarbg.to%3A2980",
+              "entities": [
+                {
+                  "offset": 142,
+                  "length": 25,
+                  "type": "url"
+                },
+                {
+                  "offset": 199,
+                  "length": 24,
+                  "type": "url"
+                },
+                {
+                  "offset": 255,
+                  "length": 14,
+                  "type": "url"
+                },
+                {
+                  "offset": 290,
+                  "length": 12,
+                  "type": "url"
+                },
+                {
+                  "offset": 323,
+                  "length": 12,
+                  "type": "url"
+                }
+              ],
+              "is_topic_message": true
+            },
+            "text": "/magnet@n8n_pat_bot",
+            "entities": [
+              {
+                "offset": 0,
+                "length": 19,
+                "type": "bot_command"
+              }
+            ],
+            "is_topic_message": true
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": 300
+  },
+  "staticData": {
+    "global": {
+      "oldEpisodeIds": [
+        "2e7a73ca492b4c53fcbb50f420ca0effe295c5f6",
+        "7d966e378a0e5d959cd0a90ff64d70ce259117bc",
+        "d5ee1d3dae55d1a8f7d0f0cf8d1454d53ea13446",
+        "e40623fe3066d472cd1f514d751f610fc0b365e4",
+        "d05d49f00f6588095317e584674b0f093183bf7a",
+        "9c6cd523e9480457ab2d7fc1e7ef168724acd137",
+        "c2a7571c6d131727449ae4b3bc74c3384faa8143",
+        "b0228457c86bd15546b51e3affa3b16be4c6d9b5",
+        "80b66428d10d6f4f025bdfd8c479d60daf20702e",
+        "118c3fb57e869b0bd4f285d58cb09a6315963967",
+        "527f361859546aed12e190e386b158fc893a9e0e",
+        "1e17e18a90a6e8d0157e91d5d6c2d04130f48fd9",
+        "1cae860ca03585c933fefd1fa1fbef652363bc45",
+        "e223495819425e02046e892dc6c2a6aaa0167345",
+        "df108ef99a7d4d602855f9ea9dc241e60f7ac28e",
+        "f05ce77e7e22c05e53c4772559270a9ffe3489c4",
+        "2fa19e85cb13e32c80a4e8cf13f58a663c087693",
+        "86c3f3c3817fa151316931c324c552b63ef5ebf8",
+        "29eedc8a64c0c51c00ade610093836418d79bd42",
+        "9b2d9275c1f551bdbf377a8b6d0d0f730633b693",
+        "8bfba57eabf403e9b3e3a027dd4a0b99f1023c74",
+        "11bed7c8a0d8492623b6de52a57f04e8846bfc9f",
+        "ad79db36fc84286610f58c2c01ec63933c68ba92",
+        "2a3f079ce7345cdfe4688e28f8e60ef75ddee669",
+        "e6da6925e8d4644c2232cf29b5ce667fa9438b1d",
+        "5bef29952d7052cb2f71c9fdc6c158c870491461",
+        "6097b4003482dfd710c99a54f1fbb6c37d97fd4a",
+        "c7b3e5586695b84ff5036bbf903cb7a49011671b",
+        "b6ac3dcce3360f5d2dce15350d2cbebb4904150f",
+        "715a871a49840e2c127f9f346c94f56828f80f48",
+        "2a90eeb4d3aefe8d0fe6cc8939b979854bd05b8c",
+        "76c7342f5f651958113f0ddb2b42397783025ceb",
+        "6bcd54c0f202b57b97bbcd369aa859fe4d148690",
+        "5677433fae03fd4e2ec8e3ff87beef1b58987f66",
+        "392c1e3e99871b6033843ce6f88b075ffe2f8a17",
+        "1f29c25643934d4821c666cfeee979a4695dd3ba",
+        "cd724bc6ec952652b870b0fed2f9ee63fda50aad",
+        "c7eeb2ad520439b965db75158a6f863c491fc16d",
+        "a2e05cfe80381a009649064c2772a219252ad2bf",
+        "af2d8dcebbb0bdd752404b589602c14e785eccd5",
+        "a0bd4902125384fd79c285c5198e7b106350cd8e",
+        "d50bdab8d85401c02cc4e49495a6679ec7630e71",
+        "ec9543b92fb76cdefbb6e3ddaf6b323fb3ee4ea5",
+        "10fe2e47dc1e76d7524722b426c0a755711af183",
+        "479961d7f39a420d6538863537fb723a18998167",
+        "fbbf6485c26d4ed6bc2dc0e07aaa58c4cd47e600"
+      ]
+    },
+    "node:RSS Feed Trigger": {
+      "lastItemDate": "2024-07-03T02:20:25.000Z"
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-07-03T08:05:06.000Z",
+  "versionId": "c76e9799-378f-4700-9c68-e64ddf74c167"
+}
