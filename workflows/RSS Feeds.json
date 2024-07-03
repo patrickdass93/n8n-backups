@@ -1,0 +1,1848 @@
+{
+  "active": true,
+  "connections": {
+    "Filter Latest": {
+      "main": [
+        [
+          {
+            "node": "Filter Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Data": {
+      "main": [
+        [
+          {
+            "node": "Filter Duplicates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Duplicates": {
+      "main": [
+        [
+          {
+            "node": "Tweet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pocket Fav": {
+      "main": [
+        [
+          {
+            "node": "Filter Latest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LYF: Maybank Platinum [CC]": {
+      "main": [
+        [
+          {
+            "node": "Telegram - LYF: MBB [CC]",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - XDA": {
+      "main": [
+        [
+          {
+            "node": "Dedup - XDA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - Soya Cincau": {
+      "main": [
+        [
+          {
+            "node": "Dedup - Soya Cincau",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - Lowyat": {
+      "main": [
+        [
+          {
+            "node": "Dedup - Lowyat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LYF: UOB [CC]": {
+      "main": [
+        [
+          {
+            "node": "Telegram - LYF: UOB [CC]",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LYF: SC [CC]": {
+      "main": [
+        [
+          {
+            "node": "Telegram - LYF: SC [CC]",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LYF: GX Bank [PF]": {
+      "main": [
+        [
+          {
+            "node": "Telegram - LYF: GX Bank [PF]",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LYF: Finance [PF]": {
+      "main": [
+        [
+          {
+            "node": "Telegram - LYF: Finance [PF]",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LYF: Smart Home": {
+      "main": [
+        [
+          {
+            "node": "Telegram - LYF: Smart Home",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LYF: Kopitiam": {
+      "main": [
+        [
+          {
+            "node": "Telegram - LYF: Kopitiam",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - Says": {
+      "main": [
+        [
+          {
+            "node": "Dedup - Says",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - Free Malaysia Today": {
+      "main": [
+        [
+          {
+            "node": "Dedup - Free Malaysia Today",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - The Malaysian Reserve": {
+      "main": [
+        [
+          {
+            "node": "Dedup - The Malaysian Reserve",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - Herald Malaysia": {
+      "main": [
+        [
+          {
+            "node": "Dedup - Herald Malaysia",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedup - The Malaysian Reserve": {
+      "main": [
+        [
+          {
+            "node": "Telegram - The Malaysian Reserve",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedup - Herald Malaysia": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Herald Malaysia",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedup - Free Malaysia Today": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Free Malaysia Today",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedup - Says": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Says",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedup - Lowyat": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Lowyat News",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedup - Soya Cincau": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Soya Cincau",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - Chrome Unboxed": {
+      "main": [
+        [
+          {
+            "node": "Dedup - Chrome Unboxed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - Android Central": {
+      "main": [
+        [
+          {
+            "node": "Dedup - Android Central",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - Android Authority": {
+      "main": [
+        [
+          {
+            "node": "Dedup - Android Authority",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - Android Police": {
+      "main": [
+        [
+          {
+            "node": "Dedup - Android Police",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - TechCrunch": {
+      "main": [
+        [
+          {
+            "node": "Dedup - TechCrunch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - Verge": {
+      "main": [
+        [
+          {
+            "node": "Dedup - The Verge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedup - The Verge": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Verge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedup - TechCrunch": {
+      "main": [
+        [
+          {
+            "node": "Telegram - TechCrunch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedup - Engadget": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Engadget",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedup - Android Police": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Android Police",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedup - Android Authority": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Android Authority",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedup - Android Central": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Android Central",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedup - Chrome Unboxed": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Chrome Unboxed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedup - XDA": {
+      "main": [
+        [
+          {
+            "node": "Telegram - XDA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - Engadget": {
+      "main": [
+        [
+          {
+            "node": "Dedup - Engadget",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-06-25T03:16:39.785Z",
+  "id": "sOYObfQdsqHKZmAC",
+  "meta": null,
+  "name": "RSS Feeds",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://getpocket.com/v3/add",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "consumer_key",
+              "value": "102748-055e7f3304970ba873c2748"
+            },
+            {
+              "name": "access_token",
+              "value": "2954f38c-4ae5-ecbc-b10f-ad30b3"
+            },
+            {
+              "name": "url",
+              "value": "={{$json[\"link\"]}}"
+            }
+          ]
+        }
+      },
+      "name": "Send to Pocket",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        300,
+        1560
+      ],
+      "id": "ab4b6303-0ee3-4401-b825-83f35ee58f6f",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newArticleIds = items.map(item => item.json[\"id\"]);\nconst oldArticleIds = staticData.oldArticleIds; \n\nif (!oldArticleIds) {\n  staticData.oldArticleIds = newArticleIds;\n  return items;\n}\n\nconst actualNewArticleIds = newArticleIds.filter((id) => !oldArticleIds.includes(id));\nconst actualNewArticle = items.filter((data) => actualNewArticleIds.includes(data.json['id']));\nstaticData.oldArticleIds = [...actualNewArticleIds, ...oldArticleIds];\n\nreturn actualNewArticle; \n/*\nconst new_items = [];\n\n// Get static data stored with the workflow\nconst data = this.getWorkflowStaticData(\"node\");\n\ndata.id = data.id || [];\n\nfor (let i = items.length - 1; i >= 0; i--) {\n\n\t// Check if data is already present\n\tif (data.id.includes(items[i].json.id)) {\n\t\tbreak;\n\t} else {\n\t\t// if new data then add it to an array\n\t\tnew_items.push({\n\t\t\tjson: {\n\t\t\t\tid: items[i].json.id\n\t\t\t},\n\t\t});\n\t}\n}\n\ndata.id = items.map((item) => item.json.id);\n\n// return new items\nreturn new_items;*/"
+      },
+      "name": "Filter Chrome Unboxed Duplicates",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        500,
+        1560
+      ],
+      "id": "f0d3d57a-88c5-48d0-8c78-e43766bef21d",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "latest",
+              "value": "={{ $json[\"list\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "13e29692-77e9-41fd-8934-41ae5d2bf673",
+      "name": "Filter Latest",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        460,
+        1360
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "link",
+              "value": "={{$node[\"Filter Latest\"].json[\"latest\"][Object.keys($node[\"Filter Latest\"].json[\"latest\"]).join(', ')][\"resolved_url\"]}}"
+            },
+            {
+              "name": "title",
+              "value": "={{$node[\"Filter Latest\"].json[\"latest\"][Object.keys($node[\"Filter Latest\"].json[\"latest\"]).join(', ')][\"resolved_title\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ca9246b1-fa82-4969-8a95-31dd31c946cd",
+      "name": "Filter Data",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        620,
+        1360
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newPostIds = items.map(item => item.json[\"link\"]);\nconst oldPostIds = staticData.oldPostIds; \n\nif (!oldPostIds) {\n  staticData.oldPostIds = newPostIds;\n  return items;\n}\n\nconst actualNewPostIds = newPostIds.filter((id) => !oldPostIds.includes(id));\nconst actualNewPost = items.filter((data) => actualNewPostIds.includes(data.json['link']));\nstaticData.oldPostIds = [...actualNewPostIds, ...oldPostIds];\n\nreturn actualNewPost; "
+      },
+      "name": "Filter Duplicates",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        780,
+        1360
+      ],
+      "id": "e87c2e84-7b36-484f-a68d-8fbc436949e3",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "text": "={{$json[\"title\"]}}\n{{$json[\"link\"]}}",
+        "additionalFields": {}
+      },
+      "id": "4aac7482-8974-4955-9cea-7216b9141a66",
+      "name": "Tweet",
+      "type": "n8n-nodes-base.twitter",
+      "typeVersion": 1,
+      "position": [
+        940,
+        1360
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "https://getpocket.com/v3/get",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "consumer_key",
+              "value": "102748-055e7f3304970ba873c2748"
+            },
+            {
+              "name": "access_token",
+              "value": "2954f38c-4ae5-ecbc-b10f-ad30b3"
+            },
+            {
+              "name": "favorite",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "name": "Pocket Fav",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        300,
+        1360
+      ],
+      "id": "fa2304bb-18c6-4475-9747-800e58f23725",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.title }}\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 5
+        }
+      },
+      "id": "c68730f9-5586-490e-b8dd-37238b4bc483",
+      "name": "Telegram - Lowyat News",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        -640,
+        740
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.title }}\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 6
+        }
+      },
+      "id": "6e9bebca-3be7-42ef-bbee-16b7e6e27fee",
+      "name": "Telegram - Soya Cincau",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        -640,
+        560
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.title }}\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 7
+        }
+      },
+      "id": "078f9717-fa87-4c20-945a-83923c6f0d4d",
+      "name": "Telegram - XDA",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1800
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.title }}\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 8
+        }
+      },
+      "id": "df3f5c2f-45d6-42cb-8569-9fece2134be4",
+      "name": "Telegram - Chrome Unboxed",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1620
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.title }}\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 9
+        }
+      },
+      "id": "8555f023-c486-4a4d-9324-5c242b35dd2d",
+      "name": "Telegram - Engadget",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        0,
+        920
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.title }}\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 10
+        }
+      },
+      "id": "19058ec4-d1d8-448d-9be6-d96ae5590706",
+      "name": "Telegram - Verge",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        0,
+        560
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.title }}\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 11
+        }
+      },
+      "id": "2a0b17ba-9d1e-4423-873f-6e7c81c68583",
+      "name": "Telegram - Android Police",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1080
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.title }}\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 12
+        }
+      },
+      "id": "79e805ee-1dbe-484c-9c75-180ae43c7b20",
+      "name": "Telegram - Android Authority",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1260
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.title }}\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 13
+        }
+      },
+      "id": "af2f3a27-a860-4224-810e-eeb849271095",
+      "name": "Telegram - Android Central",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1440
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 30
+            }
+          ]
+        },
+        "feedUrl": "http://chromeunboxed.com/feed"
+      },
+      "id": "9a5eaad7-3974-4bdd-b7cf-aa4bcc0b20be",
+      "name": "RSS - Chrome Unboxed",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        1620
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "feedUrl": "http://rss.lowyat.net/topic/4646971"
+      },
+      "id": "9d84c6fb-1a2f-4014-a244-b41c03088f79",
+      "name": "LYF: Maybank Platinum [CC]",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        310,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 30
+            }
+          ]
+        },
+        "feedUrl": "https://www.xda-developers.com/feed"
+      },
+      "id": "c92b8fc8-e21e-4fe6-a1d4-5c4e02b76f2a",
+      "name": "RSS - XDA",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        1800
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 30
+            }
+          ]
+        },
+        "feedUrl": "http://www.soyacincau.com/feed"
+      },
+      "id": "73f9d8cf-adbe-438c-8231-a8ad8a02a435",
+      "name": "RSS - Soya Cincau",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 30
+            }
+          ]
+        },
+        "feedUrl": "https://www.lowyat.net/feed/"
+      },
+      "id": "818098c9-fbcf-4b8e-96c9-a9c9ae156f91",
+      "name": "RSS - Lowyat",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 30
+            }
+          ]
+        },
+        "feedUrl": "https://www.engadget.com/rss.xml"
+      },
+      "id": "9bb0a9be-dcf2-42cb-a9ee-0dc02fe050f5",
+      "name": "RSS - Engadget",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 30
+            }
+          ]
+        },
+        "feedUrl": "https://www.theverge.com/rss/index.xml"
+      },
+      "id": "d018644e-e232-4d4a-97aa-1ed401fc908f",
+      "name": "RSS - Verge",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 30
+            }
+          ]
+        },
+        "feedUrl": "http://feeds.feedburner.com/AndroidPolice"
+      },
+      "id": "a44eb30b-ffcd-4c38-afc9-acb71dcec74c",
+      "name": "RSS - Android Police",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 30
+            }
+          ]
+        },
+        "feedUrl": "http://feed.androidauthority.com/"
+      },
+      "id": "c4554cce-64c4-4034-a398-bc7c5b6034f7",
+      "name": "RSS - Android Authority",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        1260
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 30
+            }
+          ]
+        },
+        "feedUrl": "http://feeds.feedburner.com/androidcentral?format=xml"
+      },
+      "id": "85f663db-8b89-43da-b2de-94f24af82b96",
+      "name": "RSS - Android Central",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Articles\n",
+        "height": 1540.2419354838705,
+        "width": 1242.7328546717292
+      },
+      "id": "fb159488-a6d4-41d6-a31e-6bf19d5ac8b9",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1040,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Lowyat Forums\n",
+        "height": 800.9786311885454,
+        "width": 882.1146692515388
+      },
+      "id": "f917b9a0-21d8-4a9d-9157-97797eaf1703",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        260,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "feedUrl": "http://rss.lowyat.net/topic/4527718"
+      },
+      "id": "6d92eed1-ff42-465e-aa01-ebbd22621e6e",
+      "name": "LYF: UOB [CC]",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        310,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.contentSnippet }}\n\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 15
+        }
+      },
+      "id": "93640b75-8cbc-40c4-b4b8-c49b2da80d63",
+      "name": "Telegram - LYF: UOB [CC]",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        510,
+        740
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "feedUrl": "http://rss.lowyat.net/topic/4095341"
+      },
+      "id": "826d2473-30f9-48a4-91f7-268bf9126e24",
+      "name": "LYF: SC [CC]",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        310,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.contentSnippet }}\n\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 18
+        }
+      },
+      "id": "d60c072b-5719-42c4-8f02-d7fcf6ed5317",
+      "name": "Telegram - LYF: SC [CC]",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        510,
+        920
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.contentSnippet }}\n\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 14
+        }
+      },
+      "id": "db8b29ab-df4f-43b1-b5e5-d1febf81be10",
+      "name": "Telegram - LYF: MBB [CC]",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        510,
+        560
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "feedUrl": "http://rss.lowyat.net/topic/5416294"
+      },
+      "id": "ba9a487c-c428-4c51-bfcc-9885cb23b005",
+      "name": "LYF: GX Bank [PF]",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        310,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.contentSnippet }}\n\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 21
+        }
+      },
+      "id": "123a0e57-23ba-40e6-b0c6-cbeff5a97b71",
+      "name": "Telegram - LYF: GX Bank [PF]",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        510,
+        1080
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 20
+            }
+          ]
+        },
+        "feedUrl": "http://rss.lowyat.net/forum/153"
+      },
+      "id": "3cd68d4c-78e1-484c-b6d8-31f06989afbd",
+      "name": "LYF: Finance [PF]",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        770,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "=**{{ $json.title }}**\n{{ $json.contentSnippet }}\n\n{{ $json.link }} ",
+        "additionalFields": {
+          "reply_to_message_id": 22
+        }
+      },
+      "id": "c59c30ba-6f17-4136-8892-8dbbd8d2ffdc",
+      "name": "Telegram - LYF: Finance [PF]",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        970,
+        560
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "feedUrl": "http://rss.lowyat.net/topic/3554748"
+      },
+      "id": "942dd363-400f-4305-b0b7-6447690d1d77",
+      "name": "LYF: Smart Home",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        770,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "=**{{ $json.title }}**\n{{ $json.contentSnippet }}\n\n{{ $json.link }} ",
+        "additionalFields": {
+          "reply_to_message_id": 25
+        }
+      },
+      "id": "34fbd228-ce91-42ef-9897-0094bf8d74bc",
+      "name": "Telegram - LYF: Smart Home",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        970,
+        740
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 10
+            }
+          ]
+        },
+        "feedUrl": "http://rss.lowyat.net/forum/23"
+      },
+      "id": "d25d7382-93d3-400f-b75b-1857e3189634",
+      "name": "LYF: Kopitiam",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        770,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "=**{{ $json.title }}**\n\n{{ $json.link }} ",
+        "additionalFields": {
+          "reply_to_message_id": 28
+        }
+      },
+      "id": "986b52a6-bf0c-4a85-a61b-0b2ce9cbc5da",
+      "name": "Telegram - LYF: Kopitiam",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        970,
+        920
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 30
+            }
+          ]
+        },
+        "feedUrl": "https://techcrunch.com/feed/"
+      },
+      "id": "28f73d28-e87c-4e21-9371-76bde746c04b",
+      "name": "RSS - TechCrunch",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.title }}\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 5846
+        }
+      },
+      "id": "7de47346-a959-4e7f-8423-0c8e4a468b38",
+      "name": "Telegram - TechCrunch",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        0,
+        740
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 30
+            }
+          ]
+        },
+        "feedUrl": "https://says.com/my/rss"
+      },
+      "id": "7c8b0654-614c-4372-9281-a20c7e3abbd8",
+      "name": "RSS - Says",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.title }}\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 5900
+        }
+      },
+      "id": "fae9452e-75f9-4064-bc03-a5cdb8838edf",
+      "name": "Telegram - Says",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        -640,
+        920
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 30
+            }
+          ]
+        },
+        "feedUrl": "https://cms.freemalaysiatoday.com/feed/"
+      },
+      "id": "af4b95d6-f2d1-4236-86d3-aaadb66ee113",
+      "name": "RSS - Free Malaysia Today",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.title }}\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 5901
+        }
+      },
+      "id": "f5e84e95-527f-418a-96de-c11cd5ac58ce",
+      "name": "Telegram - Free Malaysia Today",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        -640,
+        1080
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 30
+            }
+          ]
+        },
+        "feedUrl": "https://themalaysianreserve.com/feed/"
+      },
+      "id": "748dea6d-02ff-4657-9e73-829a58c85d67",
+      "name": "RSS - The Malaysian Reserve",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        1260
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.title }}\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 5902
+        }
+      },
+      "id": "7c2c2967-a25c-4600-9154-431caa1eb83f",
+      "name": "Telegram - The Malaysian Reserve",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        -640,
+        1260
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 30
+            }
+          ]
+        },
+        "feedUrl": "https://www.heraldmalaysia.com/home/rss"
+      },
+      "id": "247cde63-4100-49a4-a00a-2a85b0e23e22",
+      "name": "RSS - Herald Malaysia",
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1002020182459",
+        "text": "={{ $json.title }}\n{{ $json.link }}",
+        "additionalFields": {
+          "reply_to_message_id": 5904
+        }
+      },
+      "id": "585f533a-d9ef-4b16-87e6-5760991bd1c4",
+      "name": "Telegram - Herald Malaysia",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        -640,
+        1440
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newFeedItemIds = items.map(item => item.json[\"guid\"]);\nconst oldFeedItemIds = staticData.oldFeedItemIds; \n\nif (!oldFeedItemIds) {\n  staticData.oldFeedItemIds = newFeedItemIds;\n  return items;\n}\n\nconst actualNewFeedItemIds = newFeedItemIds.filter((guid) => !oldFeedItemIds.includes(guid));\nconst actualNewFeedItem = items.filter((data) => actualNewFeedItemIds.includes(data.json['guid']));\nstaticData.oldFeedItemIds = [...actualNewFeedItemIds, ...oldFeedItemIds];\n\nreturn actualNewFeedItem; "
+      },
+      "name": "Dedup - The Malaysian Reserve",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -820,
+        1260
+      ],
+      "id": "68d67aff-0640-4285-a3a9-b21f860691f7"
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newFeedItemIds = items.map(item => item.json[\"guid\"]);\nconst oldFeedItemIds = staticData.oldFeedItemIds; \n\nif (!oldFeedItemIds) {\n  staticData.oldFeedItemIds = newFeedItemIds;\n  return items;\n}\n\nconst actualNewFeedItemIds = newFeedItemIds.filter((guid) => !oldFeedItemIds.includes(guid));\nconst actualNewFeedItem = items.filter((data) => actualNewFeedItemIds.includes(data.json['guid']));\nstaticData.oldFeedItemIds = [...actualNewFeedItemIds, ...oldFeedItemIds];\n\nreturn actualNewFeedItem; "
+      },
+      "name": "Dedup - Herald Malaysia",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -820,
+        1440
+      ],
+      "id": "3f1e9728-2f04-449c-9357-8f264133b902"
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newFeedItemIds = items.map(item => item.json[\"guid\"]);\nconst oldFeedItemIds = staticData.oldFeedItemIds; \n\nif (!oldFeedItemIds) {\n  staticData.oldFeedItemIds = newFeedItemIds;\n  return items;\n}\n\nconst actualNewFeedItemIds = newFeedItemIds.filter((guid) => !oldFeedItemIds.includes(guid));\nconst actualNewFeedItem = items.filter((data) => actualNewFeedItemIds.includes(data.json['guid']));\nstaticData.oldFeedItemIds = [...actualNewFeedItemIds, ...oldFeedItemIds];\n\nreturn actualNewFeedItem; "
+      },
+      "name": "Dedup - Free Malaysia Today",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -820,
+        1080
+      ],
+      "id": "78a9f1f2-9141-47e4-b802-e2cddc63d16f"
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newFeedItemIds = items.map(item => item.json[\"guid\"]);\nconst oldFeedItemIds = staticData.oldFeedItemIds; \n\nif (!oldFeedItemIds) {\n  staticData.oldFeedItemIds = newFeedItemIds;\n  return items;\n}\n\nconst actualNewFeedItemIds = newFeedItemIds.filter((guid) => !oldFeedItemIds.includes(guid));\nconst actualNewFeedItem = items.filter((data) => actualNewFeedItemIds.includes(data.json['guid']));\nstaticData.oldFeedItemIds = [...actualNewFeedItemIds, ...oldFeedItemIds];\n\nreturn actualNewFeedItem; "
+      },
+      "name": "Dedup - Says",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -820,
+        920
+      ],
+      "id": "37c6bbd1-1415-4e60-96e5-f31009c9cbb9"
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newFeedItemIds = items.map(item => item.json[\"guid\"]);\nconst oldFeedItemIds = staticData.oldFeedItemIds; \n\nif (!oldFeedItemIds) {\n  staticData.oldFeedItemIds = newFeedItemIds;\n  return items;\n}\n\nconst actualNewFeedItemIds = newFeedItemIds.filter((guid) => !oldFeedItemIds.includes(guid));\nconst actualNewFeedItem = items.filter((data) => actualNewFeedItemIds.includes(data.json['guid']));\nstaticData.oldFeedItemIds = [...actualNewFeedItemIds, ...oldFeedItemIds];\n\nreturn actualNewFeedItem; "
+      },
+      "name": "Dedup - Lowyat",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -820,
+        740
+      ],
+      "id": "ae2decf0-de9c-474e-b89d-e0fb0462f4bf"
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newFeedItemIds = items.map(item => item.json[\"guid\"]);\nconst oldFeedItemIds = staticData.oldFeedItemIds; \n\nif (!oldFeedItemIds) {\n  staticData.oldFeedItemIds = newFeedItemIds;\n  return items;\n}\n\nconst actualNewFeedItemIds = newFeedItemIds.filter((guid) => !oldFeedItemIds.includes(guid));\nconst actualNewFeedItem = items.filter((data) => actualNewFeedItemIds.includes(data.json['guid']));\nstaticData.oldFeedItemIds = [...actualNewFeedItemIds, ...oldFeedItemIds];\n\nreturn actualNewFeedItem; "
+      },
+      "name": "Dedup - Soya Cincau",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -820,
+        560
+      ],
+      "id": "5c44ce20-3c58-43fb-b5f6-048fc203a2e8"
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newFeedItemIds = items.map(item => item.json[\"guid\"]);\nconst oldFeedItemIds = staticData.oldFeedItemIds; \n\nif (!oldFeedItemIds) {\n  staticData.oldFeedItemIds = newFeedItemIds;\n  return items;\n}\n\nconst actualNewFeedItemIds = newFeedItemIds.filter((guid) => !oldFeedItemIds.includes(guid));\nconst actualNewFeedItem = items.filter((data) => actualNewFeedItemIds.includes(data.json['guid']));\nstaticData.oldFeedItemIds = [...actualNewFeedItemIds, ...oldFeedItemIds];\n\nreturn actualNewFeedItem; "
+      },
+      "name": "Dedup - XDA",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        1800
+      ],
+      "id": "bd871711-4a50-4c82-a90c-c5f0d963a481"
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newFeedItemIds = items.map(item => item.json[\"guid\"]);\nconst oldFeedItemIds = staticData.oldFeedItemIds; \n\nif (!oldFeedItemIds) {\n  staticData.oldFeedItemIds = newFeedItemIds;\n  return items;\n}\n\nconst actualNewFeedItemIds = newFeedItemIds.filter((guid) => !oldFeedItemIds.includes(guid));\nconst actualNewFeedItem = items.filter((data) => actualNewFeedItemIds.includes(data.json['guid']));\nstaticData.oldFeedItemIds = [...actualNewFeedItemIds, ...oldFeedItemIds];\n\nreturn actualNewFeedItem; "
+      },
+      "name": "Dedup - Chrome Unboxed",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        1620
+      ],
+      "id": "3af82044-5b19-48ce-a5bb-1222304a7980"
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newFeedItemIds = items.map(item => item.json[\"guid\"]);\nconst oldFeedItemIds = staticData.oldFeedItemIds; \n\nif (!oldFeedItemIds) {\n  staticData.oldFeedItemIds = newFeedItemIds;\n  return items;\n}\n\nconst actualNewFeedItemIds = newFeedItemIds.filter((guid) => !oldFeedItemIds.includes(guid));\nconst actualNewFeedItem = items.filter((data) => actualNewFeedItemIds.includes(data.json['guid']));\nstaticData.oldFeedItemIds = [...actualNewFeedItemIds, ...oldFeedItemIds];\n\nreturn actualNewFeedItem; "
+      },
+      "name": "Dedup - Android Central",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        1440
+      ],
+      "id": "b91455d4-2444-4176-9267-850e23df251a"
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newFeedItemIds = items.map(item => item.json[\"guid\"]);\nconst oldFeedItemIds = staticData.oldFeedItemIds; \n\nif (!oldFeedItemIds) {\n  staticData.oldFeedItemIds = newFeedItemIds;\n  return items;\n}\n\nconst actualNewFeedItemIds = newFeedItemIds.filter((guid) => !oldFeedItemIds.includes(guid));\nconst actualNewFeedItem = items.filter((data) => actualNewFeedItemIds.includes(data.json['guid']));\nstaticData.oldFeedItemIds = [...actualNewFeedItemIds, ...oldFeedItemIds];\n\nreturn actualNewFeedItem; "
+      },
+      "name": "Dedup - Android Authority",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        1260
+      ],
+      "id": "fc7fbf22-b46e-406a-bef2-1aefe7482035"
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newFeedItemIds = items.map(item => item.json[\"guid\"]);\nconst oldFeedItemIds = staticData.oldFeedItemIds; \n\nif (!oldFeedItemIds) {\n  staticData.oldFeedItemIds = newFeedItemIds;\n  return items;\n}\n\nconst actualNewFeedItemIds = newFeedItemIds.filter((guid) => !oldFeedItemIds.includes(guid));\nconst actualNewFeedItem = items.filter((data) => actualNewFeedItemIds.includes(data.json['guid']));\nstaticData.oldFeedItemIds = [...actualNewFeedItemIds, ...oldFeedItemIds];\n\nreturn actualNewFeedItem; "
+      },
+      "name": "Dedup - Android Police",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        1080
+      ],
+      "id": "d7a4fcb2-8674-48c2-8571-bb7ab55f42f1"
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newFeedItemIds = items.map(item => item.json[\"guid\"]);\nconst oldFeedItemIds = staticData.oldFeedItemIds; \n\nif (!oldFeedItemIds) {\n  staticData.oldFeedItemIds = newFeedItemIds;\n  return items;\n}\n\nconst actualNewFeedItemIds = newFeedItemIds.filter((guid) => !oldFeedItemIds.includes(guid));\nconst actualNewFeedItem = items.filter((data) => actualNewFeedItemIds.includes(data.json['guid']));\nstaticData.oldFeedItemIds = [...actualNewFeedItemIds, ...oldFeedItemIds];\n\nreturn actualNewFeedItem; "
+      },
+      "name": "Dedup - Engadget",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        920
+      ],
+      "id": "63ba42d9-785a-4f66-a5d1-523097497b18"
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newFeedItemIds = items.map(item => item.json[\"guid\"]);\nconst oldFeedItemIds = staticData.oldFeedItemIds; \n\nif (!oldFeedItemIds) {\n  staticData.oldFeedItemIds = newFeedItemIds;\n  return items;\n}\n\nconst actualNewFeedItemIds = newFeedItemIds.filter((guid) => !oldFeedItemIds.includes(guid));\nconst actualNewFeedItem = items.filter((data) => actualNewFeedItemIds.includes(data.json['guid']));\nstaticData.oldFeedItemIds = [...actualNewFeedItemIds, ...oldFeedItemIds];\n\nreturn actualNewFeedItem; "
+      },
+      "name": "Dedup - TechCrunch",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        740
+      ],
+      "id": "ef210e6e-e90e-41a4-8061-93c8f990e7a9"
+    },
+    {
+      "parameters": {
+        "functionCode": "const staticData = getWorkflowStaticData('global');\nconst newFeedItemIds = items.map(item => item.json[\"guid\"]);\nconst oldFeedItemIds = staticData.oldFeedItemIds; \n\nif (!oldFeedItemIds) {\n  staticData.oldFeedItemIds = newFeedItemIds;\n  return items;\n}\n\nconst actualNewFeedItemIds = newFeedItemIds.filter((guid) => !oldFeedItemIds.includes(guid));\nconst actualNewFeedItem = items.filter((data) => actualNewFeedItemIds.includes(data.json['guid']));\nstaticData.oldFeedItemIds = [...actualNewFeedItemIds, ...oldFeedItemIds];\n\nreturn actualNewFeedItem; "
+      },
+      "name": "Dedup - The Verge",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        560
+      ],
+      "id": "ab73aefc-b785-44a4-b98d-96b9386fdf68"
+    }
+  ],
+  "pinData": {
+    "LYF: Maybank Platinum [CC]": [
+      {
+        "json": {
+          "creator": "fruitie",
+          "title": "Post #14484",
+          "link": "http://forum.lowyat.net/topic/4646971/latest#14484",
+          "pubDate": "Mon, 13 May 2024 10:37:18 +0800",
+          "author": "fruitie",
+          "content": "<!--QuoteBegin-BetterCallSaul+May 12 2024, 03:02 PM--><div class='quotetop'>QUOTE(BetterCallSaul &#064; May 12 2024, 03:02 PM)</div><div class='quotemain'><!--QuoteEBegin-->MotorTakaful by Etiqa accepts AMEX.<br /><br /><a href='https://pictr.com/image/xPpe56' target='_blank'><img src='https://pictr.com/images/2024/05/12/xPpe56.md.png' border='0' alt='user posted image' /></a><br />[right][snapback]109721988[/snapback][/right]<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Nice. Just in time for my car insurance renewal next month. <!--emo&:D--><img src='http://static.lowyat.net/style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo-->",
+          "contentSnippet": "QUOTE(BetterCallSaul @ May 12 2024, 03:02 PM)\nMotorTakaful by Etiqa accepts AMEX.\n\n[right][snapback]109721988[/snapback][/right]\n\n\nNice. Just in time for my car insurance renewal next month.",
+          "isoDate": "2024-05-13T02:37:18.000Z"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "none",
+    "saveManualExecutions": false,
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": 60
+  },
+  "staticData": {
+    "node:RSS - Chrome Unboxed": {
+      "lastItemDate": "2024-07-02T21:42:07.000Z"
+    },
+    "node:LYF: Maybank Platinum [CC]": {
+      "lastItemDate": "2024-07-02T13:42:17.000Z"
+    },
+    "node:RSS - XDA": {
+      "lastItemDate": "2024-07-03T05:09:02.000Z"
+    },
+    "node:RSS - Soya Cincau": {
+      "lastItemDate": "2024-07-03T03:53:39.000Z"
+    },
+    "node:RSS - Lowyat": {
+      "lastItemDate": "2024-07-03T06:29:35.000Z"
+    },
+    "node:RSS - Engadget": {
+      "lastItemDate": "2024-07-03T07:01:28.000Z"
+    },
+    "node:RSS - Verge": {
+      "lastItemDate": "2024-07-03T07:00:00.000Z"
+    },
+    "node:RSS - Android Police": {
+      "lastItemDate": "2024-07-03T06:00:11.000Z"
+    },
+    "node:RSS - Android Authority": {
+      "lastItemDate": "2024-07-03T06:32:31.000Z"
+    },
+    "node:RSS - Android Central": {
+      "lastItemDate": "2024-07-02T22:25:33.000Z"
+    },
+    "node:LYF: UOB [CC]": {
+      "lastItemDate": "2024-07-03T03:31:49.000Z"
+    },
+    "node:LYF: SC [CC]": {
+      "lastItemDate": "2024-07-02T13:21:25.000Z"
+    },
+    "node:LYF: GX Bank [PF]": {
+      "lastItemDate": "2024-07-03T07:10:38.000Z"
+    },
+    "node:LYF: Finance [PF]": {
+      "lastItemDate": "2024-06-30T18:44:12.000Z"
+    },
+    "node:LYF: Smart Home": {
+      "lastItemDate": "2024-07-03T08:10:40.000Z"
+    },
+    "node:LYF: Kopitiam": {
+      "lastItemDate": "2024-07-03T08:08:09.000Z"
+    },
+    "node:RSS - TechCrunch": {
+      "lastItemDate": "2024-07-03T07:00:00.000Z"
+    },
+    "node:RSS - Says": {
+      "lastItemDate": "2024-07-03T06:20:06.000Z"
+    },
+    "node:RSS - Free Malaysia Today": {
+      "lastItemDate": "2024-07-03T07:29:03.000Z"
+    },
+    "node:RSS - The Malaysian Reserve": {
+      "lastItemDate": "2024-07-03T07:22:12.000Z"
+    },
+    "node:RSS - Herald Malaysia": {},
+    "global": {
+      "oldEpisodeIds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "oldFeedItemIds": [
+        "036dbf27-c074-4b02-9522-a09288846f59",
+        "47d439c3-854f-485b-8b2d-d87e7cbc2b18",
+        "https://www.androidpolice.com/google-keep-multiple-accounts-split-screen-notes/",
+        "https://www.androidpolice.com/samsung-family-health-data-coming-for-galaxy-watches/",
+        "https://www.androidpolice.com/samsung-july-10-unpacked-event-what-to-expect/",
+        "https://themalaysianreserve.com/?p=499700"
+      ]
+    }
+  },
+  "tags": [],
+  "triggerCount": 21,
+  "updatedAt": "2024-07-03T07:17:19.000Z",
+  "versionId": "791825f4-0ef5-4565-ac43-93d5a6995d8b"
+}
