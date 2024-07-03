@@ -1,0 +1,441 @@
+{
+  "active": true,
+  "connections": {
+    "Set3": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set2": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Set1": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge2": {
+      "main": [
+        [
+          {
+            "node": "Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cron": {
+      "main": [
+        [
+          {
+            "node": "Net Worth",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Overall Investment",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Crypto",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Stocks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Net Worth": {
+      "main": [
+        [
+          {
+            "node": "Set3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Overall Investment": {
+      "main": [
+        [
+          {
+            "node": "Set2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto": {
+      "main": [
+        [
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stocks": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-06-23T12:41:00.689Z",
+  "id": "SLimbZFtgnJySSnW",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Net Worth Daily Update",
+  "nodes": [
+    {
+      "parameters": {
+        "chatId": "-1001618651151",
+        "text": "=Net worth > ${{$json[\"net_worth\"][\"0\"][0]}}\n\nInvestments\nOverall\t\t> {{$json[\"overall\"][\"0\"][0]}}\nCrypto\t\t> {{$json[\"crypto\"][\"0\"][0]}}\nStock \t\t> {{$json[\"stock\"][\"0\"][0]}}",
+        "additionalFields": {
+          "parse_mode": "HTML",
+          "reply_to_message_id": 4274
+        }
+      },
+      "id": "1f160cac-582f-4bee-824b-860d46aedb19",
+      "name": "Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        720
+      ],
+      "retryOnFail": true,
+      "credentials": {
+        "telegramApi": {
+          "id": "dpvcMQxEfRgBuXvX",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "stock",
+              "value": "={{ $json[\"data\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "1637561a-b955-4ae6-b97e-94c240474a32",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        680,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "crypto",
+              "value": "={{ $json[\"data\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "adb118b3-5b0a-4f56-889d-525b42a035b0",
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        680,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "overall",
+              "value": "={{ $json[\"data\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "febfe52f-43e4-4650-a2c6-344e61fd8e97",
+      "name": "Set2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        680,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "net_worth",
+              "value": "={{ $json[\"data\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "d641617f-12a5-4b0b-8238-fdf3360de814",
+      "name": "Set3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        680,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "id": "92b7f222-de4d-4b06-962d-d861a797cdfc",
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        940,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "id": "71c1bd07-e3a6-4e20-b9be-7b13b6150bf2",
+      "name": "Merge1",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        940,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "id": "7c48872f-ddc1-4274-b8ab-4408c63d9881",
+      "name": "Merge2",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "hour": 7,
+              "minute": 30
+            }
+          ]
+        }
+      },
+      "id": "08167f47-3ac6-45e5-a63a-efdf127964d0",
+      "name": "Cron",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [
+        160,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "sheetId": "1e7l0rAhnqx3j_Q41J5RF1XzCG6oAtpGdoH31-qT65jU",
+        "range": "Patrick!G1",
+        "rawData": true,
+        "options": {}
+      },
+      "id": "b850e702-783b-4f7b-9782-42d8e0621101",
+      "name": "Net Worth",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        460,
+        460
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "rpPclCfyhLKUTQIO",
+          "name": "Google Sheets - patrickdass93"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sheetId": "1e7l0rAhnqx3j_Q41J5RF1XzCG6oAtpGdoH31-qT65jU",
+        "range": "Patrick!H93",
+        "rawData": true,
+        "options": {}
+      },
+      "id": "aca74aad-d9aa-4406-934c-f38c0dbc243d",
+      "name": "Overall Investment",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        460,
+        640
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "rpPclCfyhLKUTQIO",
+          "name": "Google Sheets - patrickdass93"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sheetId": "1e7l0rAhnqx3j_Q41J5RF1XzCG6oAtpGdoH31-qT65jU",
+        "range": "Patrick!H95",
+        "rawData": true,
+        "options": {}
+      },
+      "id": "2d8f549f-bd2c-49c1-9215-612c98855e35",
+      "name": "Crypto",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        460,
+        820
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "rpPclCfyhLKUTQIO",
+          "name": "Google Sheets - patrickdass93"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sheetId": "1e7l0rAhnqx3j_Q41J5RF1XzCG6oAtpGdoH31-qT65jU",
+        "range": "Patrick!H106",
+        "rawData": true,
+        "options": {}
+      },
+      "id": "960dc54a-88ff-41db-bdb6-2c20c23ac041",
+      "name": "Stocks",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        460,
+        1000
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "rpPclCfyhLKUTQIO",
+          "name": "Google Sheets - patrickdass93"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": 60,
+    "errorWorkflow": "Jq1jjQrEpBG7dqHJ"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-06-28T07:54:01.000Z",
+  "versionId": "574f27e3-a874-410d-835a-72a19cf1e411"
+}
